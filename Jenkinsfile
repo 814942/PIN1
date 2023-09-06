@@ -59,7 +59,9 @@ pipeline {
         sh '''
           docker run -d -p 3000:3000 127.0.0.1:5000/grupo5/testapp
         '''
-        echo "APP RUNNING: http://localhost:3000"
+        script {
+          echo "APP RUNNING: http://localhost:3000"
+        }
       }
     }
   }
